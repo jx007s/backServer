@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: container_mydb  # 컨테이너 이름 설정
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456  # root 계정의 비밀번호 설정
+      MYSQL_DATABASE: study_db     # study_db 데이터베이스 자동 생성
+      MYSQL_USER: user1            # user1 계정 생성
+      MYSQL_PASSWORD: 1234         # user1 계정의 비밀번호 설정
+    ports:
+      - "3306:3306"              # MySQL 기본 포트 매핑
+    volumes:
+      - mysql-data:/var/lib/mysql  # 데이터 지속성을 위한 볼륨 설정
+    restart: always             # 컨테이너가 종료되면 자동으로 재시작
+
+volumes:
+  mysql-data:
+    driver: local
