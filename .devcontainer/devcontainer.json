@@ -1,8 +1,0 @@
-{
-  "name": "Express React Example",
-  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node",
-  "appPort": [3000, 3001],
-  "runArgs": [
-    "--network", "host"
-  ]
-}
