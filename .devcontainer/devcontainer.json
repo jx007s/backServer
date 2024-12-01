@@ -1,0 +1,17 @@
+{
+    "name": "my-codespace",
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "portsAttributes": {
+      "5000": {
+        "onAutoForward": "openOnDemand"
+      },
+      "3000": {
+        "onAutoForward": "openOnDemand"
+      }
+    },
+    "extensions": [
+      "ms-vscode.vscode-typescript-next"
+    ]
+  }

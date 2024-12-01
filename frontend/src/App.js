@@ -6,13 +6,15 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   // GitHub Codespaces에서 제공하는 URL로 변경
-  //const API_URL = 'http://<your-codespace-name>.github.dev:5000/posts';  // Codespaces URL로 변경
-  const API_URL = 'https://shiny-meme-r77wvvv7r6whp797-5000.app.github.dev/posts';  // Codespaces URL로 변경
-  console.log(API_URL);
+  //const API_URL = 'https://probable-fortnight-966w444655wfp5pp-5000.app.github.dev/posts';  // Codespaces URL로 변경
+  //const API_URL = 'https://shiny-meme-r77wvvv7r6whp797-5000.app.github.dev/posts';  // Codespaces URL로 변경
+  //const API_URL = 'http://localhost:5000/posts';  // Codespaces URL로 변경
+    const API_URL = 'https://5000-<username>-<repo>.githubpreview.dev/posts'
   
 
   // 게시판 목록을 API에서 가져오는 함수
   useEffect(() => {
+    console.log(API_URL);
     axios.get(API_URL)
       .then(response => {
 
